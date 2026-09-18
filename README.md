@@ -23,10 +23,10 @@ Sugestão de estrutura:
 
 ### Pesquisa de plataformas de distribuição de jogos
 
-Como referência de mercado, analisamos 3 plataformas de distribuição de jogos já consolidadas:
+Como referência de mercado, analisamos 4 plataformas de distribuição de jogos já consolidadas:
 
 <!--
-TODO: Preencher com 3 plataformas pesquisadas (ex: Steam, Epic Games Store, itch.io)
+TODO: Preencher com 4 plataformas pesquisadas (ex: Steam, Epic Games Store, itch.io)
 Sugestão de tópicos por plataforma:
 - O que ela faz bem (referência positiva)
 - O que poderia ser diferente na Iara Games
@@ -35,6 +35,7 @@ Sugestão de tópicos por plataforma:
 1. **[Nome da plataforma]** — *(observações)*
 2. **[Nome da plataforma]** — *(observações)*
 3. **[Nome da plataforma]** — *(observações)*
+4. **[Nome da plataforma]** — *(observações)*
 
 ---
 
@@ -125,9 +126,11 @@ As decisões de acessibilidade do projeto — paleta com contraste verificado (W
 ## 👥 Equipe
 
 <!-- TODO: adicionar nomes e RMs dos integrantes -->
-- Nome — RM
-- Nome — RM
-
+- André Guima Gonçalves — RM576031
+- Stéfany Binelo da Rosa — RM576326
+- Daniely Bittencourt Grutzmann Muzeka RM575991
+- Gabriel Honorio Queiroz - RM574855
+- Nicole Toscano - RM 574909
 ---
 
 *Projeto desenvolvido para a disciplina de Web Design — FIAP.*
