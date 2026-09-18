@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IARA GAMES</title>
+
+        <!-- Icone no Browser -->
+     <link rel="shortcut icon" href="./images/controller.svg" type="image/svg+xml">
+
+    <!-- Declarando as fontes pelo Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Chamada para o css -->
+     <link rel="stylesheet" href="./CSS/styles.css">
+
+          <!-- Chamada do BS Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+</head>
+<body>
+    <!-- header da pagina -->
+    <header class="header-page" id="top">
+    <h1 class="logo">
+        <img src="./Imagens/logo_IARA_GAMES.svg" alt="IARA Games - Jogos 100% Brasileiros" class="logo-img">
+    </h1>
+
+    <nav aria-label="Navegação principal">
+        <ul class="header-menu">
+            <li><a href="explorar.html" class="item-menu">Explorar</a></li>
+            <li><a href="estudios.html" class="item-menu">Estúdios</a></li>
+            <li><a href="ofertas.html" class="item-menu">Ofertas</a></li>
+        </ul>
+    </nav>
+<!-- Header - barra de navegação - Pesquisar -->
+    <form class="header-search" role="search" action="#">
+        <label for="busca-jogos" class="visually-hidden">Buscar jogos</label>
+        <input
+            type="search"
+            id="busca-jogos"
+            name="busca"
+            placeholder="Buscar jogos...">
+        <button type="submit" aria-label="Buscar">🔍</button>
+    </form>
+
+    <nav aria-label="Conta">
+        <ul class="header-menu">
+            <li><a href="biblioteca.html" class="item-menu">Biblioteca</a></li>
+            <li><a href="perfil.html" class="item-menu">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Hero -->
+<section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="../Imagens/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h2>
+            Descubra o <span class="text-highlight">FUTURO</span> que nasce no <span class="text-highlight">BRASIL</span>.
+        </h2>
+        <p class="hero-subtitle">Jogos independentes brasileiros para descobrir, jogar e apoiar.</p>
+        <a href="explorar.html" class="btn-primary">Explorar jogos</a>
+    </div>
+</section>
+<!-- Sessão de jogos disponíveis -->
+<section class="jogos-destaque">
+
+    <div class="jogos-header">
+        <h2>Jogos em destaque</h2>
+        <a href="explorar.html" class="link-ver-todos">Ver todos</a>
+    </div>
+
+    <div class="jogos-grid">
+    <article class="jogo-card">
+    <img src="./Imagens/img_1.jpg" title="Jogo Brasileiro 1" alt="Capa do jogo brasileiro 1" class="jogo-imagem" loading="lazy">
+    <h3 class="jogo-nome">Jogo brasileiro 1</h3>
+    <p class="jogo-estudio">Estúdio A</p>
+    <p class="jogo-preco">R$ XX,XX</p>
+    </article>
+
+    <article class="jogo-card">
+    <img src="./Imagens/img_2.jpg" title="Jogo Brasileiro 2" alt="Capa do jogo brasileiro 2" class="jogo-imagem" loading="lazy">
+    <h3 class="jogo-nome">Jogo brasileiro 2</h3>
+    <p class="jogo-estudio">Estúdio B</p>
+    <p class="jogo-preco">R$ XX,XX</p>
+    </article>
+
+    <article class="jogo-card">
+    <img src="./Imagens/img_3.jpg" title="Jogo Brasileiro 3" alt="Capa do jogo brasileiro 3" class="jogo-imagem" loading="lazy">
+    <h3 class="jogo-nome">Jogo brasileiro 3</h3>
+    <p class="jogo-estudio">Estúdio C</p>
+    <p class="jogo-preco">R$ XX,XX</p>
+    </article>
+
+    <article class="jogo-card">
+    <img src="./Imagens/img_4.jpg" title="Jogo Brasileiro 4" alt="Capa do jogo brasileiro 4" class="jogo-imagem" loading="lazy">
+    <h3 class="jogo-nome">Jogo brasileiro 4</h3>
+    <p class="jogo-estudio">Estúdio D</p>
+    <p class="jogo-preco">R$ XX,XX</p>
+    </article>
+    </div>
+</section>
+
+<section class="busca-secundaria">
+    <div class="busca-geral">
+        <h2>Encontre seu próximo jogo</h2>
+    </div>
+    <form class="header-search" role="search" action="#">
+        <label for="secundaria-jogos" class="visually-hidden">Buscar jogos, estúdios ou gêneros</label>
+        <input
+            type="search"
+            id="secundaria-jogos"
+            name="busca"
+            placeholder="Buscar jogos, estúdios ou gêneros...">
+        <button type="submit" aria-label="Buscar">🔍</button>
+    </form>
+</section>
+
+<footer class="footer-page">
+    <a href="#top" class="footer-logo-link">
+        <img src="./Imagens/logo_IARA_GAMES.svg" alt="Voltar ao topo - IARA Games" class="footer-logo">
+    </a>
+</footer>
+</body>
+</html>
