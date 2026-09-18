@@ -143,7 +143,7 @@ As decisões de acessibilidade do projeto — paleta com contraste verificado (W
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/bielhonorio/IaraGames]
+   git clone https://github.com/bielhonorio/IaraGames.git
    ```
 2. Abra o arquivo `index.html` diretamente no navegador (duplo clique, ou clique com o botão direito → "Abrir com" → navegador de sua preferência).
 
