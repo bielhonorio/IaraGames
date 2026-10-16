@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Iara Games</title>
+
+    <link rel="shortcut icon"
+          href="./Imagens/logo_IARA_GAMES.svg"
+          type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+
+    <main class="pagina-cadastro">
+
+        <section class="cadastro" aria-labelledby="titulo-cadastro">
+
+            <a href="index.html" class="voltar-inicio" id="voltar-inicio">
+    ← Voltar ao início
+        </a>
+
+            <div id="apresentacao-cadastro">
+    <h1 id="titulo-cadastro">Entre para o jogo!</h1>
+
+    <p class="cadastro-subtitulo">
+        Crie seu perfil e faça parte da comunidade gamer brasileira.
+    </p>
+</div>
+
+            <form class="form-cadastro" id="form-cadastro">
+
+                <div class="campo-cadastro">
+                    <label for="nome-usuario">Nome de usuário</label>
+                    <input
+                        type="text"
+                        id="nome-usuario"
+                        name="usuario"
+                        placeholder="Digite seu nome de usuário"
+                        minlength="3"
+                        autocomplete="username"
+                        required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="email-cadastro">E-mail</label>
+                    <input
+                        type="email"
+                        id="email-cadastro"
+                        name="email"
+                        placeholder="exemplo@email.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="senha-cadastro">Senha</label>
+                    <input
+                        type="password"
+                        id="senha-cadastro"
+                        name="senha"
+                        placeholder="Mínimo de 8 caracteres"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required>
+                </div>
+
+                <button type="submit" class="btn-cadastro">
+                    Confirmar cadastro
+                </button>
+
+            </form>
+
+            <div id="mensagem-sucesso" class="mensagem-sucesso" role="status" hidden>
+    <span class="selo-sucesso">CADASTRO CONCLUÍDO</span>
+    <h2>Bem-vindo à Iara Games!</h2>
+
+    <p>
+        Você concluiu nossa demonstração de cadastro com sucesso.
+        O universo dos games brasileiros está esperando por você!
+    </p>
+
+    <a href="index.html">Explorar a Iara Games</a>
+</div>
+
+
+        </section>
+
+    </main>
+
+    <script>
+    const formulario = document.getElementById("form-cadastro");
+    const apresentacao = document.getElementById("apresentacao-cadastro");
+    const mensagem = document.getElementById("mensagem-sucesso");
+    const voltarInicio = document.getElementById("voltar-inicio");
+
+    formulario.addEventListener("submit", function(evento) {
+        evento.preventDefault();
+
+        apresentacao.hidden = true;
+        formulario.hidden = true;
+        voltarInicio.hidden = true;
+        mensagem.hidden = false;
+
+        // Move o foco para o título da confirmação (leitores de tela anunciam a mudança)
+        const tituloSucesso = mensagem.querySelector("h2");
+        tituloSucesso.setAttribute("tabindex", "-1");
+        tituloSucesso.focus();
+    });
+</script>
+
+</body>
+</html>
