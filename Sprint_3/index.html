@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IARA GAMES</title>
+
+    <!-- 1º: Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Icone no Browser -->
+     <link rel="shortcut icon" href="./Imagens/iaragames_logo_g1.png" type="image/png">
+
+    <!-- Declarando as fontes pelo Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Chamada para o css -->
+     <link rel="stylesheet" href="./CSS/styles.css">
+
+          <!-- Chamada do BS Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+</head>
+<body>
+    <a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- header da pagina -->
+    <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-iara" aria-label="Navegação principal">
+        <div class="container-fluid px-lg-4">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="./Imagens/iaragames_logo_g1.png" alt="IARA Games - Jogos 100% Brasileiros" class="logo-img">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav me-lg-auto">
+                    <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estudios.html">Estúdios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                </ul>
+
+                <form class="my-3 my-lg-0 mx-lg-3" role="search" action="#">
+                    <label for="busca-jogos" class="visually-hidden">Buscar jogos</label>
+                    <div class="input-group">
+                        <input class="form-control" type="search" id="busca-jogos"
+                               name="busca" placeholder="Buscar jogos...">
+                        <button class="btn btn-outline-iara" type="submit" aria-label="Buscar">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Criar conta</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+ <main id="conteudo">
+<!-- Hero -->
+<section class="hero position-relative overflow-hidden rounded-3 d-flex align-items-center mx-3 mx-lg-4 my-3"
+         aria-labelledby="titulo-hero">
+
+    <video class="hero-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0"
+           autoplay muted loop playsinline aria-hidden="true">
+        <source src="./Imagens/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
+
+    <div class="container position-relative z-2 py-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <h1 id="titulo-hero" class="display-5 fw-bold mb-3">
+                    Descubra o <span class="text-highlight">FUTURO</span>
+                    que nasce no <span class="text-highlight">BRASIL</span>.
+                </h1>
+                <p class="lead mb-4">
+                    Jogos independentes brasileiros para descobrir, jogar e apoiar.
+                </p>
+                <a href="explorar.html" class="btn btn-iara btn-lg">Explorar jogos</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sessão de jogos disponíveis -->
+<section class="container-fluid px-3 px-lg-4 my-4" aria-labelledby="titulo-destaques">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="titulo-destaques" class="h3 mb-0">Jogos em destaque</h2>
+        <a href="explorar.html">Ver todos</a>
+    </div>
+
+    <div id="carrosselJogos" class="carousel slide px-md-5"
+         aria-roledescription="carousel" aria-label="Jogos em destaque">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1: jogos 1 a 4 -->
+            <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="Jogos 1 a 4">
+                <div class="row row-cols-2 row-cols-lg-4 g-3">
+
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_1.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 1" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 1</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio A</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_2.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 2" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 1</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio B</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_3.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 3" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 1</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio C</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_4.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 1" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 4</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio D</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: jogos 5 a 8 (mesma estrutura; os sem capa usam o placeholder) -->
+            <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Jogos 5 a 8">
+                <div class="row row-cols-2 row-cols-lg-4 g-3">
+
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_5.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 1" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 5</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio E</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_6.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 6" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 6</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio F</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_7.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 1" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 7</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio G</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card card-jogo h-100">
+                            <div class="ratio ratio-16x9">
+                                <img src="./Imagens/img_8.jpg" class="card-img-top object-fit-cover"
+                                     alt="Capa do jogo brasileiro 8" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="explorar.html" class="stretched-link">Jogo brasileiro 8</a>
+                                </h3>
+                                <p class="card-text text-body-secondary mb-1">Estúdio H</p>
+                                <p class="card-text jogo-preco mb-0">R$ XX,XX</p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev d-none d-md-flex" type="button"
+                data-bs-target="#carrosselJogos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Jogos anteriores</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-flex" type="button"
+                data-bs-target="#carrosselJogos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximos jogos</span>
+        </button>
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrosselJogos" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Jogos 1 a 4"></button>
+            <button type="button" data-bs-target="#carrosselJogos" data-bs-slide-to="1"
+                    aria-label="Jogos 5 a 8"></button>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid px-3 px-lg-4 my-5" aria-labelledby="titulo-busca">
+    <h2 id="titulo-busca" class="h3 mb-3">Encontre seu próximo jogo</h2>
+
+    <form role="search" action="#">
+        <label for="busca-secundaria" class="visually-hidden">Buscar jogos, estúdios ou gêneros</label>
+        <div class="input-group input-group-lg">
+            <input class="form-control" type="search" id="busca-secundaria" name="busca"
+                   placeholder="Buscar jogos, estúdios ou gêneros...">
+            <button class="btn btn-outline-iara" type="submit" aria-label="Buscar">
+                <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </form>
+</section>
+</main>
+<footer class="footer-iara mt-5 pt-5 pb-4">
+    <div class="container">
+        <div class="row gy-4 text-center text-md-start">
+
+            <div class="col-12 col-md-4">
+                <a href="#top" class="d-inline-block mb-3">
+                    <img src="./Imagens/iaragames_logo_g1.png" alt="Voltar ao topo - IARA Games" class="footer-logo">
+                </a>
+                <p class="small text-body-secondary mb-0">
+                    Jogos independentes brasileiros para descobrir, jogar e apoiar.
+                </p>
+            </div>
+
+            <nav class="col-6 col-md-4" aria-label="Plataforma">
+                <h2 class="h6 mb-3">Plataforma</h2>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="explorar.html">Explorar</a></li>
+                    <li class="mb-2"><a href="estudios.html">Estúdios</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="col-6 col-md-4" aria-label="Conta">
+                <h2 class="h6 mb-3">Sua conta</h2>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="biblioteca.html">Biblioteca</a></li>
+                    <li class="mb-2"><a href="perfil.html">Perfil</a></li>
+                    <li><a href="cadastro.html">Criar conta</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <hr class="my-4">
+        <p class="small text-center text-body-secondary mb-0">
+            © 2026 Iara Games · Projeto acadêmico FIAP
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

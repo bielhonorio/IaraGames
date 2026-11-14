@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do usuário | Iara Games</title>
+
+    <!-- 1º Bootstrap, depois ícones, fontes e, por ÚLTIMO, o nosso CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shortcut icon" href="./Imagens/iaragames_logo_g1.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+
+    <!-- Atalho para quem navega por teclado -->
+    <a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="sticky-top" id="top">
+        <nav class="navbar navbar-expand-lg navbar-iara" aria-label="Navegação principal">
+            <div class="container-fluid px-lg-4">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Imagens/iaragames_logo_g1.png"
+                         alt="IARA Games - Jogos 100% Brasileiros" class="logo-img">
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav me-lg-auto">
+                        <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="estudios.html">Estúdios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    </ul>
+
+                    <form class="my-3 my-lg-0 mx-lg-3" role="search" action="#">
+                        <label for="busca-jogos" class="visually-hidden">Buscar jogos</label>
+                        <div class="input-group">
+                            <input class="form-control" type="search" id="busca-jogos"
+                                   name="busca" placeholder="Buscar jogos...">
+                            <button class="btn btn-outline-iara" type="submit" aria-label="Buscar">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="area-usuario.html" aria-current="page">Perfil</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="cadastro.html">Criar conta</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===================== CONTEÚDO ===================== -->
+    <main id="conteudo" class="container-fluid px-3 px-lg-4 py-4">
+        <div class="row g-4">
+
+            <!-- Botão que abre o menu lateral (só aparece em telas menores que lg) -->
+            <div class="col-12 d-lg-none">
+                <button class="btn btn-outline-iara" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#menuUsuario"
+                        aria-controls="menuUsuario">
+                    <i class="bi bi-list me-2" aria-hidden="true"></i>Painel do jogador
+                </button>
+            </div>
+
+            <!-- ---------- COLUNA 1: MENU LATERAL ---------- -->
+            <aside class="col-lg-3">
+                <div class="offcanvas-lg offcanvas-start painel-lateral" tabindex="-1"
+                     id="menuUsuario" aria-labelledby="tituloMenuUsuario">
+
+                    <div class="offcanvas-header">
+                        <!-- <p> e não <h2>: este título aparece antes do <h1> no código -->
+                        <p class="offcanvas-title h5 mb-0" id="tituloMenuUsuario">Painel do jogador</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                data-bs-target="#menuUsuario" aria-label="Fechar menu"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="painel-conteudo w-100 p-3 rounded-3">
+
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="avatar-usuario" aria-hidden="true">MT</span>
+                                <div>
+                                    <p class="fw-bold mb-0">Matheus</p>
+                                    <p class="small text-body-secondary mb-0">@matheus</p>
+                                </div>
+                            </div>
+
+                            <p class="small mb-1 d-flex justify-content-between">
+                                <span>Explorador · Nv. 12</span>
+                                <span>680 / 1000 XP</span>
+                            </p>
+                            <div class="progress mb-4" role="progressbar"
+                                 aria-label="Experiência: 680 de 1000 XP"
+                                 aria-valuenow="680" aria-valuemin="0" aria-valuemax="1000">
+                                <div class="progress-bar" style="width: 68%"></div>
+                            </div>
+
+                            <p class="text-uppercase small text-body-secondary mb-2" id="rotulo-painel">
+                                Painel do jogador
+                            </p>
+                            <nav aria-labelledby="rotulo-painel">
+                                <ul class="nav nav-pills flex-column gap-1">
+                                    <li class="nav-item">
+                                        <a class="nav-link active d-flex align-items-center"
+                                           href="area-usuario.html" aria-current="page">
+                                            <i class="bi bi-grid me-2" aria-hidden="true"></i>Visão geral
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#biblioteca">
+                                            <i class="bi bi-collection-play me-2" aria-hidden="true"></i>Minha biblioteca
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#">
+                                            <i class="bi bi-person me-2" aria-hidden="true"></i>Perfil &amp; conta
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#hardware">
+                                            <i class="bi bi-cpu me-2" aria-hidden="true"></i>Meu hardware
+                                            <span class="badge badge-iara ms-auto">Novo</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#">
+                                            <i class="bi bi-heart me-2" aria-hidden="true"></i>Lista de desejos
+                                            <span class="badge text-bg-secondary ms-auto">8<span class="visually-hidden"> itens</span></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#compras">
+                                            <i class="bi bi-receipt me-2" aria-hidden="true"></i>Compras &amp; licenças
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="#">
+                                            <i class="bi bi-shield-check me-2" aria-hidden="true"></i>Segurança &amp; sessões
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="caixa-segura rounded-3 p-2 mt-4 small d-flex align-items-center gap-2">
+                                <i class="bi bi-lock-fill" aria-hidden="true"></i>
+                                <div>
+                                    <strong class="d-block">Conta protegida</strong>
+                                    2FA está ativo
+                                </div>
+                            </div>
+
+                            <a href="index.html" class="btn btn-sair btn-sm w-100 mt-3">
+                                <i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Encerrar sessão
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ---------- COLUNA 2: CONTEÚDO DA PÁGINA ---------- -->
+            <div class="col-lg-9">
+
+                <nav aria-label="Você está aqui">
+                    <ol class="breadcrumb small text-uppercase mb-2">
+                        <li class="breadcrumb-item"><a href="area-usuario.html">Área do usuário</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Visão geral</li>
+                    </ol>
+                </nav>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-5">
+                    <div>
+                        <h1 class="display-6 text-uppercase mb-2">Boas-vindas, Matheus.</h1>
+                        <p class="text-body-secondary mb-0">
+                            Gerencie seus jogos, o espaço do seu disco e a segurança da sua conta.
+                        </p>
+                    </div>
+                    <ul class="list-unstyled d-flex gap-2 mb-0">
+                        <li class="border rounded-3 px-3 py-2 small">
+                            <i class="bi bi-heart me-2" aria-hidden="true"></i><strong>8</strong> desejos
+                        </li>
+                        <li class="border rounded-3 px-3 py-2 small">
+                            <i class="bi bi-controller me-2" aria-hidden="true"></i><strong>12</strong> jogos na coleção
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ===== BLOCO 1: MINHA BIBLIOTECA (jornada do Matheus) ===== -->
+                <section id="biblioteca" class="card card-iara mb-4" aria-labelledby="titulo-biblioteca">
+
+                    <div class="card-header d-flex align-items-center gap-3">
+                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-collection-play"></i></span>
+                        <div>
+                            <h2 id="titulo-biblioteca" class="h6 text-uppercase mb-0">Minha biblioteca</h2>
+                            <p class="small text-body-secondary mb-0">Seus jogos e o espaço do seu disco</p>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                        <!-- Etapa 1 da jornada: ver o espaço do disco -->
+                        <div class="mb-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2 mb-2">
+                                <h3 class="h6 mb-0">Armazenamento do disco (SSD)</h3>
+                                <p class="small mb-0"><strong>220 GB</strong> usados de 256 GB</p>
+                            </div>
+                            <div class="progress barra-armazenamento" role="progressbar"
+                                 aria-label="Armazenamento do disco"
+                                 aria-valuenow="220" aria-valuemin="0" aria-valuemax="256"
+                                 aria-valuetext="220 GB usados de 256 GB">
+                                <div class="progress-bar" style="width: 86%"></div>
+                            </div>
+                            <p class="small mb-0 mt-2">
+                                <i class="bi bi-exclamation-triangle text-warning me-1" aria-hidden="true"></i>
+                                Pouco espaço livre: restam 36 GB.
+                            </p>
+                        </div>
+
+                        <!-- Etapa 2 da jornada: filtrar o acervo -->
+                        <form aria-labelledby="titulo-filtros">
+                            <h3 id="titulo-filtros" class="h6 mb-2">Filtrar biblioteca</h3>
+                            <div class="row g-3 align-items-end">
+
+                                <div class="col-12 col-lg">
+                                    <fieldset>
+                                        <legend class="visually-hidden">Filtros rápidos</legend>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <input type="checkbox" class="btn-check" id="filtro-nao-instalados" autocomplete="off">
+                                            <label class="btn btn-outline-iara" for="filtro-nao-instalados">Não instalados</label>
+
+                                            <input type="checkbox" class="btn-check" id="filtro-leves" autocomplete="off">
+                                            <label class="btn btn-outline-iara" for="filtro-leves">Leves (menos de 5 GB)</label>
+
+                                            <input type="checkbox" class="btn-check" id="filtro-compativeis" autocomplete="off">
+                                            <label class="btn btn-outline-iara" for="filtro-compativeis">Compatíveis com meu PC</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <label for="ordenar" class="form-label small mb-1">Ordenar por</label>
+                                    <select id="ordenar" class="form-select">
+                                        <option>Mais recentes</option>
+                                        <option>Menor tamanho</option>
+                                        <option>Maior tamanho</option>
+                                        <option>Nome (A–Z)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Etapas 3 e 4 da jornada: instalar, jogar, desinstalar -->
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item d-none d-md-block small text-uppercase text-body-secondary"
+                            aria-hidden="true">
+                            <div class="row g-3">
+                                <div class="col-md-4">Jogo</div>
+                                <div class="col-md-2">Tamanho</div>
+                                <div class="col-md-3">Status</div>
+                                <div class="col-md-3 text-md-end">Ações</div>
+                            </div>
+                        </li>
+
+                        <!-- Jogo 1: instalado -->
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_1.jpg" alt="Capa do jogo brasileiro 1"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 1</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio A</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 2,4 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge badge-iara">Instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Compatível com seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Jogar Jogo brasileiro 1">
+                                        <i class="bi bi-play-fill me-1" aria-hidden="true"></i>Jogar
+                                    </button>
+                                    <button type="button" class="btn btn-outline-iara btn-sm" aria-label="Desinstalar Jogo brasileiro 1">
+                                        <i class="bi bi-trash3 me-1" aria-hidden="true"></i>Desinstalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Jogo 2: não instalado -->
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_2.jpg" alt="Capa do jogo brasileiro 2"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 2</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio B</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 3,8 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge text-bg-secondary">Não instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Compatível com seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Instalar Jogo brasileiro 2">
+                                        <i class="bi bi-download me-1" aria-hidden="true"></i>Instalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Jogo 3: instalado -->
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_3.jpg" alt="Capa do jogo brasileiro 3"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 3</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio C</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 4,6 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge badge-iara">Instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Compatível com seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Jogar Jogo brasileiro 3">
+                                        <i class="bi bi-play-fill me-1" aria-hidden="true"></i>Jogar
+                                    </button>
+                                    <button type="button" class="btn btn-outline-iara btn-sm" aria-label="Desinstalar Jogo brasileiro 3">
+                                        <i class="bi bi-trash3 me-1" aria-hidden="true"></i>Desinstalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Jogo 4: não instalado, desempenho reduzido -->
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_4.jpg" alt="Capa do jogo brasileiro 4"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 4</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio D</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 12 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge text-bg-secondary">Não instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-exclamation-circle me-1" aria-hidden="true"></i>Desempenho reduzido no seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Instalar Jogo brasileiro 4">
+                                        <i class="bi bi-download me-1" aria-hidden="true"></i>Instalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_5.jpg" alt="Capa do jogo brasileiro 5"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 5</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio E</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 1,2 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge badge-iara">Instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Compatível com seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Jogar Jogo brasileiro 5">
+                                        <i class="bi bi-play-fill me-1" aria-hidden="true"></i>Jogar
+                                    </button>
+                                    <button type="button" class="btn btn-outline-iara btn-sm" aria-label="Desinstalar Jogo brasileiro 5">
+                                        <i class="bi bi-trash3 me-1" aria-hidden="true"></i>Desinstalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4 d-flex align-items-center gap-3">
+                                    <img src="./Imagens/img_6.jpg" alt="Capa do jogo brasileiro 6"
+                                         class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                    <div>
+                                        <h3 class="h6 mb-0">Jogo brasileiro 6</h3>
+                                        <p class="small text-body-secondary mb-0">Estúdio F</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <i class="bi bi-hdd me-1" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Tamanho:</span> 6,5 GB
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge text-bg-secondary">Não instalado</span>
+                                    <p class="small mt-1 mb-0"><i class="bi bi-check-circle me-1" aria-hidden="true"></i>Compatível com seu PC</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button type="button" class="btn btn-neon btn-sm" aria-label="Instalar Jogo brasileiro 6">
+                                        <i class="bi bi-download me-1" aria-hidden="true"></i>Instalar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- ===== BLOCO 2: MEU PERFIL DE HARDWARE ===== -->
+                <section id="hardware" class="card card-iara mb-4" aria-labelledby="titulo-hardware">
+
+                    <div class="card-header d-flex flex-wrap align-items-center gap-3">
+                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-display"></i></span>
+                        <div class="me-auto">
+                            <h2 id="titulo-hardware" class="h6 text-uppercase mb-0">
+                                Meu perfil de hardware
+                                <span class="badge badge-iara ms-2 align-middle">Perfil ativo</span>
+                            </h2>
+                            <p class="small text-body-secondary mb-0">Seu PC, suas regras</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-iara btn-sm">
+                            <i class="bi bi-pencil me-1" aria-hidden="true"></i>Editar configuração
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row g-4">
+
+                            <div class="col-12 col-xl-7">
+                                <dl class="spec-lista mb-0">
+                                    <div class="spec-item d-flex align-items-center gap-3">
+                                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+                                        <div class="flex-grow-1">
+                                            <dt class="small text-uppercase text-body-secondary">Processador</dt>
+                                            <dd class="fw-bold mb-0">AMD Ryzen 5 5600X</dd>
+                                        </div>
+                                        <i class="bi bi-check-lg text-neon" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Verificado</span>
+                                    </div>
+                                    <div class="spec-item d-flex align-items-center gap-3">
+                                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-memory"></i></span>
+                                        <div class="flex-grow-1">
+                                            <dt class="small text-uppercase text-body-secondary">Memória RAM</dt>
+                                            <dd class="fw-bold mb-0">16 GB DDR4</dd>
+                                        </div>
+                                        <i class="bi bi-check-lg text-neon" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Verificado</span>
+                                    </div>
+                                    <div class="spec-item d-flex align-items-center gap-3">
+                                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-gpu-card"></i></span>
+                                        <div class="flex-grow-1">
+                                            <dt class="small text-uppercase text-body-secondary">Placa de vídeo</dt>
+                                            <dd class="fw-bold mb-0">NVIDIA RTX 3060 · 12 GB</dd>
+                                        </div>
+                                        <i class="bi bi-check-lg text-neon" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Verificado</span>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <div class="col-12 col-xl-5">
+                                <div class="caixa-compat rounded-3 p-3 h-100">
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                               id="aviso-compat" checked aria-describedby="desc-compat">
+                                        <label class="form-check-label fw-bold text-uppercase small" for="aviso-compat">
+                                            Aviso de compatibilidade
+                                        </label>
+                                    </div>
+                                    <p id="desc-compat" class="small text-body-secondary">
+                                        Verificamos automaticamente se seu PC roda um jogo antes da compra.
+                                    </p>
+                                    <p class="small mb-0">
+                                        <i class="bi bi-check-circle text-neon me-1" aria-hidden="true"></i>
+                                        92% da loja compatível com seu PC
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-flex flex-wrap justify-content-between align-items-center gap-2 small">
+                        <span><i class="bi bi-shield-lock me-1" aria-hidden="true"></i>
+                            Seus dados de hardware são privados e nunca serão compartilhados.</span>
+                        <button type="button" class="btn btn-outline-iara btn-sm">
+                            <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Detectar meu PC
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===== BLOCO 3: HISTÓRICO DE COMPRAS E LICENÇAS ===== -->
+                <section id="compras" class="card card-iara mb-4" aria-labelledby="titulo-compras">
+
+                    <div class="card-header d-flex flex-wrap align-items-center gap-3">
+                        <span class="icone-bloco" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+                        <div class="me-auto">
+                            <h2 id="titulo-compras" class="h6 text-uppercase mb-0">Histórico de compras &amp; licenças</h2>
+                            <p class="small text-body-secondary mb-0">Tudo seu, tudo transparente</p>
+                        </div>
+                        <a href="#" class="small">Ver histórico completo<i class="bi bi-chevron-right ms-1" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table tabela-iara align-middle mb-0">
+                            <caption class="visually-hidden">Últimas compras e licenças da sua conta</caption>
+                            <thead>
+                                <tr class="small text-uppercase">
+                                    <th scope="col">Jogo / pedido</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Licença</th>
+                                    <th scope="col">Comprovante</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="fw-normal">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="./Imagens/img_1.jpg" alt="Capa do jogo brasileiro 1"
+                                                 class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                            <div>
+                                                <span class="fw-bold d-block">Jogo brasileiro 1</span>
+                                                <span class="small text-body-secondary">Pedido IG-0001</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><time datetime="2026-05-18">18/05/2026</time></td>
+                                    <td class="fw-bold">R$ 79,90</td>
+                                    <td><span class="badge badge-iara"><i class="bi bi-check2 me-1" aria-hidden="true"></i>Licença sua</span></td>
+                                    <td>
+                                        <a href="#" aria-label="Baixar comprovante em PDF de Jogo brasileiro 1">
+                                            <i class="bi bi-download me-1" aria-hidden="true"></i>PDF
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-outline-iara btn-sm"
+                                                aria-label="Solicitar reembolso de Jogo brasileiro 1">Solicitar reembolso</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="fw-normal">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="./Imagens/img_2.jpg" alt="Capa do jogo brasileiro 2"
+                                                 class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                            <div>
+                                                <span class="fw-bold d-block">Jogo brasileiro 2</span>
+                                                <span class="small text-body-secondary">Pedido IG-0002</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><time datetime="2026-04-02">02/04/2026</time></td>
+                                    <td class="fw-bold">R$ 36,99</td>
+                                    <td><span class="badge badge-iara"><i class="bi bi-check2 me-1" aria-hidden="true"></i>Licença sua</span></td>
+                                    <td>
+                                        <a href="#" aria-label="Baixar comprovante em PDF de Jogo brasileiro 2">
+                                            <i class="bi bi-download me-1" aria-hidden="true"></i>PDF
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" aria-label="Ver detalhes de Jogo brasileiro 2">Ver detalhes
+                                            <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="fw-normal">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="./Imagens/img_3.jpg" alt="Capa do jogo brasileiro 3"
+                                                 class="miniatura-jogo" width="56" height="56" loading="lazy">
+                                            <div>
+                                                <span class="fw-bold d-block">Jogo brasileiro 3</span>
+                                                <span class="small text-body-secondary">Pedido IG-0003</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><time datetime="2026-01-14">14/01/2026</time></td>
+                                    <td class="fw-bold">R$ 47,48</td>
+                                    <td><span class="badge badge-iara"><i class="bi bi-check2 me-1" aria-hidden="true"></i>Sem DRM</span></td>
+                                    <td>
+                                        <a href="#" aria-label="Baixar comprovante em PDF de Jogo brasileiro 3">
+                                            <i class="bi bi-download me-1" aria-hidden="true"></i>PDF
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" aria-label="Ver detalhes de Jogo brasileiro 3">Ver detalhes
+                                            <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-footer d-flex flex-wrap justify-content-between gap-2 small">
+                        <span><i class="bi bi-shield-check me-1" aria-hidden="true"></i>
+                            Compra justa: licenças claras, comprovantes acessíveis e nenhum DRM abusivo.</span>
+                        <span>Precisa de ajuda? <a href="#">Fale com o suporte</a></span>
+                    </div>
+                </section>
+
+            </div>
+        </div><
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer-iara mt-5 pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 text-center text-md-start">
+
+                <div class="col-12 col-md-4">
+                    <a href="#top" class="d-inline-block mb-3">
+                        <img src="./Imagens/iaragames_logo_g1.png" alt="Voltar ao topo - IARA Games" class="footer-logo">
+                    </a>
+                    <p class="small text-body-secondary mb-0">
+                        Jogos independentes brasileiros para descobrir, jogar e apoiar.
+                    </p>
+                </div>
+
+                <nav class="col-6 col-md-4" aria-label="Plataforma">
+                    <h2 class="h6 mb-3">Plataforma</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="explorar.html">Explorar</a></li>
+                        <li class="mb-2"><a href="estudios.html">Estúdios</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="col-6 col-md-4" aria-label="Conta">
+                    <h2 class="h6 mb-3">Sua conta</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="biblioteca.html">Biblioteca</a></li>
+                        <li class="mb-2"><a href="area-usuario.html">Perfil</a></li>
+                        <li><a href="cadastro.html">Criar conta</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr class="my-4">
+            <p class="small text-center text-body-secondary mb-0">
+                © 2026 Iara Games · Projeto acadêmico FIAP
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

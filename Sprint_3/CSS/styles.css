@@ -1,0 +1,534 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("../Fonte/orbitron-master/Orbitron\ Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* VARIÁVEIS DA MARCA  */
+:root {
+    /* Fontes */
+    --font-title: "Orbitron", sans-serif;
+    --font-text: "Oxanium", sans-serif;
+
+    --color-blue-night: #0F172E;            
+    --color-forest-green: rgb(27, 65, 53); 
+    --color-earth-green: #283415;           
+    --color-earth-red: #8C141E;             
+    --color-vivid-red: #F23535;             
+    --color-water-green: #219F8A;           
+    --color-neon-green: #5AF989;            
+    --color-snow-white: #EFF1F4;           
+
+    --bg-primary: var(--color-blue-night);      
+    --bg-secondary: var(--color-forest-green);  
+    --bg-support: var(--color-earth-green);    
+
+    --text-primary: var(--color-snow-white);    
+    --text-secondary: var(--color-earth-green);
+
+    --color-badge: var(--color-earth-red);      
+    --color-cta: var(--color-vivid-red);       
+    --color-link: var(--color-water-green);    
+    --color-hover: var(--color-neon-green);    
+
+    /* Gradientes da marca */
+    --gradient-tech-life: linear-gradient(90deg, var(--color-water-green), var(--color-neon-green));
+    --gradient-tradition-action: linear-gradient(90deg, var(--color-earth-red), var(--color-vivid-red));
+    --gradient-amazon-depth: linear-gradient(90deg, var(--color-blue-night), var(--color-forest-green));
+
+    /* Espaçamentos */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 50px;
+    --spacing-2xl: 60px;
+    --spacing-3xl: 80px;
+
+    /* Tamanhos */
+    --btn-min-width: 180px;
+    --hero-max-width: 900px;
+
+    /* Bordas */
+    --radius-sm: 8px;
+    --radius-pill: 80px;
+    --border-width: 2px;
+
+    /* Efeitos */
+    --transition-fast: .5s;
+    --blur-sm: 7px;
+    --bg-glass: rgba(27, 65, 53, 0.44);   
+    --bg-video: rgba(27, 65, 53, 0.7);   
+}
+
+
+/* PONTE PARA O BOOTSTRAP */
+[data-bs-theme="dark"] {
+    --bs-body-bg: var(--color-blue-night);
+    --bs-body-color: var(--color-snow-white);
+    --bs-body-font-family: var(--font-text);
+
+    /* links: o Bootstrap usa o valor em RGB */
+    --bs-link-color-rgb: 33, 159, 138;        /* Verde Água */
+    --bs-link-hover-color-rgb: 90, 249, 137;  /* Verde Neon */
+}
+
+
+/*  BASE */
+* {
+    
+    font-family: var(--font-text);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;   
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    color: var(--text-primary);
+    text-wrap: balance;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+p a,
+.form-check-label a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
+/* CAMPOS E FORMULÁRIOS */
+.form-control,
+.form-select {
+    background-color: var(--bg-secondary);
+    border-color: var(--color-link);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-primary);
+    opacity: 0.7;  
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--bg-secondary); 
+    color: var(--text-primary);
+    border-color: var(--color-hover);
+    box-shadow: 0 0 0 0.25rem rgba(90, 249, 137, 0.35);
+}
+
+
+.form-check-input:checked {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+}
+
+.form-switch .form-check-input:checked {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230F172E'/%3e%3c/svg%3e");
+}
+
+.form-check-input:focus {
+    border-color: var(--color-hover);
+    box-shadow: 0 0 0 0.25rem rgba(90, 249, 137, 0.35);
+}
+
+
+/*  BOTÕES */
+
+.btn-outline-iara {
+    --bs-btn-color: var(--color-hover);
+    --bs-btn-border-color: var(--color-link);
+    --bs-btn-hover-color: var(--bg-primary);
+    --bs-btn-hover-bg: var(--color-hover);
+    --bs-btn-hover-border-color: var(--color-hover);
+    --bs-btn-active-color: var(--bg-primary);
+    --bs-btn-active-bg: var(--color-hover);
+    --bs-btn-active-border-color: var(--color-hover);
+}
+
+.btn-iara {
+    --bs-btn-color: var(--color-hover);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--color-hover);
+    --bs-btn-border-width: var(--border-width);
+    --bs-btn-border-radius: var(--radius-pill);
+    --bs-btn-font-weight: 700;
+    --bs-btn-padding-x: 1.875rem;
+
+    --bs-btn-hover-color: var(--text-primary);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--color-cta);
+    --bs-btn-active-color: var(--text-primary);
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: var(--color-cta);
+
+    min-width: var(--btn-min-width);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-iara::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-cta);
+    filter: blur(var(--blur-sm));
+    border-radius: var(--radius-pill);
+    opacity: .7;
+    transition: width var(--transition-fast);
+    z-index: -1;
+}
+
+.btn-iara:hover::after {
+    width: 100%;
+}
+
+.btn-neon {
+    --bs-btn-color: var(--bg-primary);
+    --bs-btn-bg: var(--color-hover);
+    --bs-btn-border-color: var(--color-hover);
+    --bs-btn-font-weight: 700;
+    --bs-btn-hover-color: var(--bg-primary);
+    --bs-btn-hover-bg: var(--color-link);
+    --bs-btn-hover-border-color: var(--color-link);
+    --bs-btn-active-color: var(--bg-primary);
+    --bs-btn-active-bg: var(--color-link);
+    --bs-btn-active-border-color: var(--color-link);
+}
+
+.btn-sair {
+    --bs-btn-color: var(--text-primary);
+    --bs-btn-border-color: var(--color-cta);
+    --bs-btn-hover-color: var(--text-primary);
+    --bs-btn-hover-bg: var(--color-earth-red);
+    --bs-btn-hover-border-color: var(--color-cta);
+    --bs-btn-active-color: var(--text-primary);
+    --bs-btn-active-bg: var(--color-earth-red);
+    --bs-btn-active-border-color: var(--color-cta);
+    --bs-btn-focus-shadow-rgb: 242, 53, 53;
+}
+
+.btn-neon,
+.btn-outline-iara,
+.btn-iara {
+    --bs-btn-focus-shadow-rgb: 90, 249, 137;
+}
+
+
+/* COMPONENTES COMUNS */
+
+.card-jogo,
+.card-iara {
+    --bs-card-bg: var(--bg-glass);
+    --bs-card-color: var(--text-primary);
+    --bs-card-border-color: rgba(255, 255, 255, 0.06);
+    --bs-card-border-radius: var(--radius-sm);
+    --bs-card-inner-border-radius: var(--radius-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-iara {
+    --bs-card-cap-bg: rgba(27, 65, 53, 0.7);
+    --bs-card-cap-color: var(--text-primary);
+}
+
+.card-iara .list-group {
+    --bs-list-group-bg: transparent;
+    --bs-list-group-color: var(--text-primary);
+    --bs-list-group-border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card-iara .card-header a,
+.card-iara .card-footer a {
+    color: var(--color-hover);
+}
+
+.card-iara .card-header a:hover,
+.card-iara .card-footer a:hover {
+    color: var(--text-primary);
+}
+
+.badge-iara {
+    background-color: var(--color-hover);
+    color: var(--bg-primary);   /* azul noite sobre neon: 12,98:1 */
+}
+
+.text-neon {
+    color: var(--color-hover);
+}
+
+.icone-bloco {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    border: 1px solid var(--color-link);
+    color: var(--color-hover);
+    font-size: 1.1rem;
+}
+
+.miniatura-jogo {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.miniatura-vazia {
+    display: grid;
+    place-items: center;
+    background: var(--bg-support);
+    color: var(--text-primary);
+}
+
+
+/* NAVBAR, HERO E JOGOS EM DESTAQUE (home) */
+
+/* --- Navbar --- */
+.navbar-iara {
+    background: rgba(15, 23, 46, 0.92);   /* quase sólido: o conteúdo que passa por baixo não atrapalha o texto */
+    backdrop-filter: blur(var(--blur-sm));
+
+    --bs-navbar-color: var(--color-snow-white);
+    --bs-navbar-hover-color: var(--color-neon-green);
+    --bs-navbar-active-color: var(--color-neon-green);
+}
+
+.navbar-brand .logo-img {
+    height: 48px;
+    width: auto;
+}
+
+/* --- Hero --- */
+.hero {
+    min-height: 70vh;
+}
+
+.hero-video {
+    object-position: center top;
+}
+
+.hero-overlay {
+    background: var(--bg-video);
+}
+
+.text-highlight {
+    color: var(--color-hover);
+}
+
+.hero-subtitle {
+    color: var(--text-primary);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* --- Jogos em destaque --- */
+/* O "apagado" fica só na imagem: o texto mantém 100% de contraste */
+.card-jogo .ratio {
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+.card-jogo:hover .ratio,
+.card-jogo:focus-within .ratio {
+    opacity: 1;
+}
+
+.card-jogo .card-title a {
+    color: var(--text-primary);
+}
+
+.card-jogo .card-title a:hover,
+.card-jogo .card-title a:focus-visible {
+    color: var(--color-hover);
+}
+
+.jogo-preco {
+    color: var(--color-hover);
+    font-weight: 700;
+}
+
+/* --- Carrossel (Bootstrap): ajustes de identidade --- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem;
+    opacity: 1;
+}
+
+.carousel-indicators {
+    position: static;   /* as bolinhas ficam abaixo dos cards, não por cima */
+    margin: var(--spacing-md) 0 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-hover);
+}
+
+/* O Bootstrap remove o contorno de foco dos controles: devolvemos, para quem usa teclado */
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible,
+.carousel-indicators [data-bs-target]:focus-visible {
+    outline: 3px solid var(--color-hover);
+    outline-offset: 2px;
+}
+
+
+/* FOOTER */
+.footer-iara {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    height: 72px;
+    width: auto;
+}
+
+
+/* ÁREA DO USUÁRIO */
+
+/* --- Menu lateral --- */
+.painel-lateral {
+    --bs-offcanvas-bg: var(--bg-primary);
+    --bs-offcanvas-color: var(--text-primary);
+}
+
+.painel-conteudo {
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.avatar-usuario {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    border: var(--border-width) solid var(--color-link);
+    color: var(--color-hover);
+    font-family: var(--font-title);
+    font-weight: 700;
+}
+
+.painel-conteudo .progress {
+    --bs-progress-height: 0.4rem;
+    --bs-progress-bg: rgba(255, 255, 255, 0.12);
+    --bs-progress-bar-bg: var(--color-hover);
+}
+
+.painel-conteudo .nav-pills {
+    --bs-nav-link-color: var(--text-primary);
+    --bs-nav-link-hover-color: var(--color-hover);
+    --bs-nav-pills-link-active-color: var(--color-hover);
+    --bs-nav-pills-link-active-bg: var(--bg-secondary);
+}
+
+.painel-conteudo .nav-link {
+    font-size: 0.95rem;
+}
+
+.painel-conteudo .nav-link:focus-visible {
+    outline: 3px solid var(--color-hover);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+.caixa-segura {
+    background: rgba(27, 65, 53, 0.7);
+    border: 1px solid var(--color-link);
+}
+
+/* --- Biblioteca --- */
+.barra-armazenamento {
+    --bs-progress-height: 0.75rem;
+    --bs-progress-bg: rgba(255, 255, 255, 0.12);
+    --bs-progress-bar-bg: var(--color-cta);   /* disco quase cheio */
+}
+
+/* --- Hardware --- */
+.spec-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spec-item:last-child {
+    border-bottom: 0;
+}
+
+.caixa-compat {
+    background: rgba(15, 23, 46, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Tabela de compras --- */
+.tabela-iara {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: rgba(255, 255, 255, 0.08);
+    min-width: 44rem;   /* abaixo disso a tabela rola na horizontal em vez de espremer */
+}
+
+.tabela-iara thead th {
+    color: var(--bs-secondary-color);
+    font-weight: 600;
+}
+
+/* CADASTRO */
+.fundo-cadastro {
+    background: var(--gradient-amazon-depth);
+}
+
+.fundo-cadastro .card-iara {
+    --bs-card-bg: rgba(15, 23, 46, 0.92);
+}
+
+
+/*  ACESSIBILIDADE: MOVIMENTO REDUZIDO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-video,
+    .hero-overlay {
+        display: none;
+    }
+
+    .hero {
+        background: var(--bg-glass);
+    }
+
+    .btn-iara::after {
+        transition: none;
+    }
+
+    .card-jogo .ratio {
+        transition: none;
+    }
+}

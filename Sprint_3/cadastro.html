@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Iara Games</title>
+
+    <!-- 1º Bootstrap, depois ícones, fontes e, por ÚLTIMO, o nosso CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="shortcut icon" href="./Imagens/iaragames_logo_g1.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+
+    <!-- Atalho para quem navega por teclado -->
+    <a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="sticky-top" id="top">
+        <nav class="navbar navbar-expand-lg navbar-iara" aria-label="Navegação principal">
+            <div class="container-fluid px-lg-4">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Imagens/iaragames_logo_g1.png"
+                         alt="IARA Games - Jogos 100% Brasileiros" class="logo-img">
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav me-lg-auto">
+                        <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="estudios.html">Estúdios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    </ul>
+
+                    <form class="my-3 my-lg-0 mx-lg-3" role="search" action="#">
+                        <label for="busca-jogos" class="visually-hidden">Buscar jogos</label>
+                        <div class="input-group">
+                            <input class="form-control" type="search" id="busca-jogos"
+                                   name="busca" placeholder="Buscar jogos...">
+                            <button class="btn btn-outline-iara" type="submit" aria-label="Buscar">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+                        <li class="nav-item"><a class="nav-link" href="area-usuario.html">Perfil</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cadastro.html" aria-current="page">Criar conta</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===================== CONTEÚDO ===================== -->
+    <main id="conteudo" class="fundo-cadastro py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-6 col-xl-5">
+
+                    <div class="card card-iara">
+                        <div class="card-body p-4 p-md-5">
+
+                            <!-- ===== ESTADO 1: formulário ===== -->
+                            <div id="painel-form">
+                                <h1 class="h2 text-center text-neon mb-2">Entre para o jogo!</h1>
+                                <p class="text-center text-body-secondary mb-4">
+                                    Crie seu perfil e faça parte da comunidade gamer brasileira.
+                                </p>
+
+                                <form id="form-cadastro" class="needs-validation" novalidate>
+
+                                    <div class="mb-3">
+                                        <label for="cad-usuario" class="form-label fw-semibold">Nome de usuário</label>
+                                        <input type="text" class="form-control" id="cad-usuario" name="usuario"
+                                               minlength="3" autocomplete="username" required
+                                               aria-describedby="ajuda-usuario erro-usuario">
+                                        <div id="ajuda-usuario" class="form-text">Mínimo de 3 caracteres.</div>
+                                        <div id="erro-usuario" class="invalid-feedback">
+                                            Escolha um nome de usuário com pelo menos 3 caracteres.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="cad-email" class="form-label fw-semibold">E-mail</label>
+                                        <input type="email" class="form-control" id="cad-email" name="email"
+                                               autocomplete="email" required
+                                               aria-describedby="ajuda-email erro-email">
+                                        <div id="ajuda-email" class="form-text">Exemplo: nome@email.com</div>
+                                        <div id="erro-email" class="invalid-feedback">
+                                            Informe um e-mail válido, como nome@email.com.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="cad-senha" class="form-label fw-semibold">Senha</label>
+                                        <input type="password" class="form-control" id="cad-senha" name="senha"
+                                               minlength="8" autocomplete="new-password" required
+                                               aria-describedby="ajuda-senha erro-senha">
+                                        <div id="ajuda-senha" class="form-text">Mínimo de 8 caracteres.</div>
+                                        <div id="erro-senha" class="invalid-feedback">
+                                            A senha precisa ter pelo menos 8 caracteres.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="cad-termos" name="termos"
+                                               required aria-describedby="erro-termos">
+                                        <label class="form-check-label" for="cad-termos">
+                                            Li e aceito os <a href="#">termos de uso</a> e a
+                                            <a href="#">política de privacidade</a>.
+                                        </label>
+                                        <div id="erro-termos" class="invalid-feedback">
+                                            Aceite os termos para criar a conta.
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-neon w-100 py-2">
+                                        Confirmar cadastro
+                                    </button>
+
+                                    <p class="small text-center mt-3 mb-0">
+                                        Já tem conta? <a href="#">Entrar</a>
+                                    </p>
+                                </form>
+                            </div>
+
+                            <!-- ===== ESTADO 2: confirmação (começa escondido) ===== -->
+                            <div id="sucesso-cadastro" class="text-center d-none">
+                                <span class="badge badge-iara text-uppercase mb-3">Cadastro concluído</span>
+                                <h2 class="h3 mb-3">Bem-vindo à Iara Games!</h2>
+                                <p class="mb-4">
+                                    Você concluiu nossa demonstração de cadastro com sucesso.
+                                    O universo dos games brasileiros está esperando por você!
+                                </p>
+                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                    <a href="index.html" class="btn btn-neon">Explorar a Iara Games</a>
+                                    <a href="area-usuario.html" class="btn btn-outline-iara">Ir para minha área</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p class="small text-center text-body-secondary mt-3 mb-0">
+                        Demonstração acadêmica: nenhum dado digitado aqui é enviado ou armazenado.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer-iara pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 text-center text-md-start">
+
+                <div class="col-12 col-md-4">
+                    <a href="#top" class="d-inline-block mb-3">
+                        <img src="./Imagens/iaragames_logo_g1.png" alt="Voltar ao topo - IARA Games" class="footer-logo">
+                    </a>
+                    <p class="small text-body-secondary mb-0">
+                        Jogos independentes brasileiros para descobrir, jogar e apoiar.
+                    </p>
+                </div>
+
+                <nav class="col-6 col-md-4" aria-label="Plataforma">
+                    <h2 class="h6 mb-3">Plataforma</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="explorar.html">Explorar</a></li>
+                        <li class="mb-2"><a href="estudios.html">Estúdios</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="col-6 col-md-4" aria-label="Conta">
+                    <h2 class="h6 mb-3">Sua conta</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="biblioteca.html">Biblioteca</a></li>
+                        <li class="mb-2"><a href="area-usuario.html">Perfil</a></li>
+                        <li><a href="cadastro.html">Criar conta</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr class="my-4">
+            <p class="small text-center text-body-secondary mb-0">
+                © 2026 Iara Games · Projeto acadêmico FIAP
+            </p>
+        </div>
+    </footer>
+
+    <!-- O JavaScript do Bootstrap vem primeiro (faz o hambúrguer abrir e fechar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Nosso único script: valida o formulário e mostra a confirmação (sem back-end) -->
+    <script>
+        (() => {
+            "use strict";
+
+            const form = document.getElementById("form-cadastro");
+            const painelForm = document.getElementById("painel-form");
+            const sucesso = document.getElementById("sucesso-cadastro");
+
+            // Avisa o leitor de tela se cada campo está válido ou não
+            const marcarCampo = (campo) => {
+                campo.setAttribute("aria-invalid", String(!campo.checkValidity()));
+            };
+
+            form.addEventListener("submit", (evento) => {
+                evento.preventDefault();   // sem back-end: nada é enviado
+
+                form.querySelectorAll("input").forEach(marcarCampo);
+
+                if (!form.checkValidity()) {
+                    form.classList.add("was-validated");        // o Bootstrap mostra os erros
+                    form.querySelector(":invalid").focus();     // leva o foco ao 1º campo com erro
+                    return;
+                }
+
+                painelForm.classList.add("d-none");
+                sucesso.classList.remove("d-none");
+
+                const titulo = sucesso.querySelector("h2");
+                titulo.setAttribute("tabindex", "-1");
+                titulo.focus();                                 // leitor de tela anuncia a confirmação
+            });
+
+            form.addEventListener("input", (evento) => {
+                if (form.classList.contains("was-validated")) {
+                    marcarCampo(evento.target);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
